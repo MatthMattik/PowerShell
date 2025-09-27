@@ -124,9 +124,10 @@ winget pin add "MiniTool Partition Wizard 11"
 winget pin add "HD Tune Pro version 6.10"
 
 
-rgba(89, 23, 231, 1) optional features (found in control panel applet)
+#optional features (found in control panel applet)
 Enable-WindowsOptionalFeature -FeatureName "Microsoft-Windows-Subsystem-Linux" -Online
 Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online -All
+
 
 
 #Add optional capabilities (found in settings app)
