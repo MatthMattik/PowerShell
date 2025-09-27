@@ -26,5 +26,3 @@
 .RELATED LINKS
 
 #>
-
-[CmdletBinding()]
