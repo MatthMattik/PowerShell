@@ -1,0 +1,149 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2024-03-09T14:25:30.829-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[			
+				{
+					"PackageIdentifier" : "ScooterSoftware.BeyondCompare.5"
+				},				
+				{
+					"PackageIdentifier" : "CrystalDewWorld.CrystalDiskMark"
+				},
+				{
+					"PackageIdentifier" : "voidtools.Everything"
+				},
+				{
+					"PackageIdentifier" : "Foxit.FoxitReader"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
+				},
+				{
+					"PackageIdentifier" : "GitHub.GitHubDesktop"
+				},
+				{
+					"PackageIdentifier" : "HeidiSQL.HeidiSQL"
+				},
+				{
+					"PackageIdentifier" : "MHNexus.HxD"
+				},
+				{
+					"PackageIdentifier" : "KeeperSecurity.KeeperDesktop"
+				},
+				{
+					"PackageIdentifier" : "LibreWolf.LibreWolf"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.AppInstaller"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal"
+				},
+				{
+					"PackageIdentifier" : "Mozilla.Firefox"
+				},
+				{
+					"PackageIdentifier" : "Notepad++.Notepad++"
+				},
+				{
+					"PackageIdentifier" : "WinSCP.WinSCP"
+				},
+				{
+					"PackageIdentifier" : "Postman.Postman"
+				},
+				{
+					"PackageIdentifier" : "Seagate.SeaTools"
+				},
+				{
+					"PackageIdentifier" : "WiresharkFoundation.Wireshark"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
+				},
+				{
+					"PackageIdentifier" : "Notion.Notion"
+				},
+				{
+					"PackageIdentifier" : "Axosoft.GitKraken"
+				},
+				{
+					"PackageIdentifier" : "DuongDieuPhap.ImageGlass"
+				},
+				{
+					"PackageIdentifier" : "Python.Launcher"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.SQLServerManagementStudio"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerAutomateDesktop"
+				},
+				{
+					"PackageIdentifier" : "Google.Chrome"
+				},
+				{
+					"PackageIdentifier" : "DBBrowserForSQLite.DBBrowserForSQLite"
+				},
+				{
+					"PackageIdentifier" : "Logitech.GHUB"
+				},
+				{
+					"PackageIdentifier" : "Giorgiotani.Peazip"
+				},
+				{
+					"PackageIdentifier" : "Meld.Meld"
+				},
+				{
+					"PackageIdentifier" : "RevoUninstaller.RevoUninstaller"
+				},
+				{
+					"PackageIdentifier" : "DisruptiveInnovations.BlueGriffon"
+				},
+				{
+					"PackageIdentifier" : "Amazon.AWSCLI"
+				},
+				{
+					"PackageIdentifier" : "Famatech.AdvancedIPScanner"
+				},
+				{
+					"PackageIdentifier" : "CodeSector.TeraCopy"
+				},
+				{
+					"PackageIdentifier" : "Dell.CommandUpdate.Universal"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
+				},
+				{
+					"PackageIdentifier" : "GPSoftware.DirectoryOpus"
+				},
+				{
+					"PackageIdentifier" : "SoftwareOK.Q-Dir"
+				},
+				{
+					"PackageIdentifier" : "EMCOSoftware.PingMonitor"
+				},
+				{
+					"PackageIdentifier" : "Rufus.Rufus"
+				},
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion" : "1.7.10582"
+}
