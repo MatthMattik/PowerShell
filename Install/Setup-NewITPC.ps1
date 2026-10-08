@@ -6,7 +6,7 @@
     
 
 .DESCRIPTION
-    A script to setup a new pc with software and powershell modules using winget
+    A script to setup a new pc with software and powershell modules using winget after fresh windows install
 
 
 .NOTES
