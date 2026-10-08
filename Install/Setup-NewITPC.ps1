@@ -1,23 +1,12 @@
 <#
-.NAME
-   Setup-NewITPC
 
 .SYNOPSIS
     A script to setup a new IT pc with software, modules, etc.
 
-.SYNTAX
     
 
 .DESCRIPTION
     A script to setup a new pc with software and powershell modules using winget
-
-.PARAMETERS
-
-
-.INPUTS
-
-
-.OUTPUTS
 
 
 .NOTES
@@ -34,20 +23,11 @@ force winget to install to the machine level:  use the command "winget settings"
   }
 }
 
-.RELATED LINKS
+.LINK
 https://github.com/microsoft/winget-cli/blob/master/doc/Settings.md
 
 #>
 
-
-[CmdletBinding(SupportsShouldProcess=$True,ConfirmImpact="Medium")]
-
-Param(
-
-)
-
-#set the JSON file of apps for winget to install
-#$Filepath = "\\Sensaria\Raleigh\Departments\IT\PowerShell\Install\Winget - copy.txt"
 
 
 #basic settings
@@ -69,6 +49,16 @@ Install-module POSH-SSH
 #Install-Module PSFramework
 #Install-Module PSUtil
 
+#optional features (found in control panel applet)
+Enable-WindowsOptionalFeature -FeatureName "Microsoft-Windows-Subsystem-Linux" -Online
+Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online -All
+
+
+#optional capabilities (found in settings app)
+Add-WindowsCapability -Name "OpenSSH.Client" -Online
+Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
+
+
 
 # Add custom module path to powershell profile
 $path = $profile.CurrentUserAllHosts
@@ -81,21 +71,6 @@ if (-not (Get-Content -Path $path | Select-String -Pattern 'IT')){
     }
 
 
-
-
-# Run debloater and advanced settings script
-# https://github.com/Raphire/Win11Debloat
-
-& "\\Sensaria\Raleigh\Departments\IT\PowerShell\Install\Win11Debloat-master\Win11Debloat.ps1"
-
-
-# Install local admin tools
-& "\\Sensaria\Raleigh\Departments\IT\Administrator Tools\MobaXterm\MobaXterm_Pro_Installer\MobaXterm_installer.msi" /qn
-& "\\Sensaria\Raleigh\Departments\IT\Administrator Tools\Goverlan\EVReachConsole_11.0.11.exe"
-& "\\Sensaria\Raleigh\Departments\IT\Administrator Tools\MiniTool PW\pw1101-setup.exe"
-& "\\Sensaria\Raleigh\Departments\IT\Administrator Tools\Emco Ping\PingMonitorSetup.exe"
-& "\\Sensaria\Raleigh\Departments\IT\Administrator Tools\Dell\Dell Storage Manager (UniSphere)\2020 R1.21\DellEMCStorageManager-20.1.21.17\Storage Manager Client 20.1.21.17.exe"
-& "\\Sensaria\Raleigh\Departments\IT\Administrator Tools\HDTunePRO\HDTunePro_610_full.exe"
 
 
 #Prompt user for winget json file
@@ -120,17 +95,10 @@ winget import -i $SelectedFile --accept-package-agreements --accept-source-agree
 
 #pin licensed apps so they dont update to the free versions
 winget pin add "Mobaxterm"
-winget pin add "MiniTool Partition Wizard 11"
 winget pin add "HD Tune Pro version 6.10"
 
 
 #optional features (found in control panel applet)
-Enable-WindowsOptionalFeature -FeatureName "Microsoft-Windows-Subsystem-Linux" -Online
-Enable-WindowsOptionalFeature -FeatureName "Containers-DisposableClientVM" -Online -All
 
 
-
-#Add optional capabilities (found in settings app)
-Add-WindowsCapability -Name "OpenSSH.Client" -Online
-Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 
