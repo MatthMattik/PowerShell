@@ -143,7 +143,7 @@
 				},
 				{
 					"PackageIdentifier" : "Famatech.AdvancedIPScanner"
-				}
+				},
 				{
 					"PackageIdentifier" : "Python.Launcher"
 				},
@@ -179,7 +179,7 @@
 				},
 				{
 					"PackageIdentifier" : "Rufus.Rufus"
-				},
+				}
 			],
 			"SourceDetails" : 
 			{
