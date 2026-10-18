@@ -22,9 +22,6 @@
 					"PackageIdentifier" : "Git.Git"
 				},
 				{
-					"PackageIdentifier" : "GlassWire.GlassWire"
-				},
-				{
 					"PackageIdentifier" : "REALiX.HWiNFO"
 				},
 				{
@@ -32,9 +29,6 @@
 				},
 				{
 					"PackageIdentifier" : "MHNexus.HxD"
-				},
-				{
-					"PackageIdentifier" : "KeeperSecurity.KeeperDesktop"
 				},
 				{
 					"PackageIdentifier" : "Mozilla.Firefox"
@@ -52,9 +46,6 @@
 					"PackageIdentifier" : "VideoLAN.VLC"
 				},
 				{
-					"PackageIdentifier" : "Zen-Team.Zen-Browser"
-				},
-				{
 					"PackageIdentifier" : "WinSCP.WinSCP"
 				},
 				{
@@ -65,9 +56,6 @@
 				},
 				{
 					"PackageIdentifier" : "WiresharkFoundation.Wireshark"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VisualStudio.2022.Community"
 				},
 				{
 					"PackageIdentifier" : "EFDSoftware.HDTunePro"
@@ -92,9 +80,6 @@
 				},
 				{
 					"PackageIdentifier" : "DBBrowserForSQLite.DBBrowserForSQLite"
-				},
-				{
-					"PackageIdentifier" : "Logitech.GHUB"
 				},
 				{
 					"PackageIdentifier" : "Giorgiotani.Peazip"
@@ -133,9 +118,6 @@
 					"PackageIdentifier" : "Microsoft.SQLServerManagementStudio"
 				},
 				{
-					"PackageIdentifier" : "pCloudAG.pCloudDrive"
-				},
-				{
 					"PackageIdentifier" : "GitHub.GitHubDesktop"
 				},
 				{
@@ -146,9 +128,6 @@
 				},
 				{
 					"PackageIdentifier" : "Python.Launcher"
-				},
-				{
-					"PackageIdentifier" : "Google.Antigravity"
 				},
 				{
 					"PackageIdentifier" : "ScooterSoftware.BeyondCompare.5"
