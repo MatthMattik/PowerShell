@@ -39,15 +39,17 @@ Set-PSRepository PSGallery -InstallationPolicy Trusted
 
 
 #Install powershell modules - comment out # the ones u want or dont want
+#I dont want them to be installed to my onedrive so i set scope to "All users" which needs admin access
 
-Install-Module Microsoft.Graph.Users
-Install-Module Microsoft.Graph.Groups
-Install-Module ExchangeOnlineManagement
-Install-module POSH-SSH
+Install-Module Microsoft.Graph.Users -Scope "AllUsers"
+Install-Module Microsoft.Graph.Groups -Scope "AllUsers"
+Install-Module ExchangeOnlineManagement -Scope "AllUsers"
+Install-module POSH-SSH -Scope "AllUsers"
 #Install-Module VCF.PowerCLI - but just vsphere. will research later
 #Install-Module AWSPowershell
 #Install-Module PSFramework
 #Install-Module PSUtil
+
 
 #optional features (found in control panel applet)
 Enable-WindowsOptionalFeature -FeatureName "Microsoft-Windows-Subsystem-Linux" -Online
@@ -60,37 +62,12 @@ Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 
 
 
-# Add custom module path to powershell profile
-$path = $profile.CurrentUserAllHosts
-if (-not (Test-Path $path)) {
-    New-Item -ItemType File -Path $path$
-    }
-
-if (-not (Get-Content -Path $path | Select-String -Pattern 'IT')){
-    '$env:Psmodulepath += ";\\Sensaria\Raleigh\Departments\IT\Powershell\Modules\"' | Out-file -Filepath $path -append
-    }
 
 
 
-
-#Prompt user for winget json file
-
-Add-Type -AssemblyName System.Windows.Forms
-
-$dialog = New-Object System.Windows.Forms.OpenFileDialog
-$dialog.InitialDirectory = "\\sensaria\raleigh\Departments\IT\PowerShell\Install"
-$dialog.Filter = "Text files (*.txt)|*.txt"
-$dialog.Title = "Select a WinGet .txt file"
-
-if ($dialog.ShowDialog() -eq "OK") {
-    $selectedFile = $dialog.FileName
-    Write-Host "You selected: $selectedFile"
-} else {
-    Write-Host "No file selected."
-}
 
 #Use winget to download and install applications
-winget import -i $SelectedFile --accept-package-agreements --accept-source-agreements --disable-interactivity
+winget import -i .\Winget-WorkPC.json --accept-package-agreements --accept-source-agreements --disable-interactivity
 
 
 #pin licensed apps so they dont update to the free versions
