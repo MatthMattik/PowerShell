@@ -1,9 +1,9 @@
 <#
 .SYNOPSIS
-   
+   Updates My Pc twice a week in task scheduler
 
 .DESCRIPTION
-    
+    software updates
 
 .NOTES
     
